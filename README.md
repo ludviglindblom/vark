@@ -105,15 +105,15 @@ The built-in `.env` parser handles `KEY=value`, quoted values, escapes inside do
 
 ## Runtime compatibility
 
-| Runtime              | Env access                                    | `.env` loading                              |
-| -------------------- | --------------------------------------------- | ------------------------------------------- |
-| Node.js ≥ 20.6       | `process.env`                                 | Native `--env-file` or vark loader          |
-| Node.js 18–20.5      | `process.env`                                 | vark loader                                 |
-| Bun                  | `process.env`                                 | Auto-loaded by Bun; vark loader as fallback |
-| Deno                 | `Deno.env.toObject()`                         | Native `--env-file` or vark loader          |
-| Vite / bundler build | `import.meta.env`                             | N/A (handled by the bundler)                |
-| Cloudflare Workers   | **Pass `{ env }` explicitly**                 | N/A (no file system)                        |
-| Vercel Edge / others | **Pass `{ env }` explicitly**                 | N/A (no file system)                        |
+| Runtime              | Env access                    | `.env` loading                              |
+| -------------------- | ----------------------------- | ------------------------------------------- |
+| Node.js ≥ 20.6       | `process.env`                 | Native `--env-file` or vark loader          |
+| Node.js 18–20.5      | `process.env`                 | vark loader                                 |
+| Bun                  | `process.env`                 | Auto-loaded by Bun; vark loader as fallback |
+| Deno                 | `Deno.env.toObject()`         | Native `--env-file` or vark loader          |
+| Vite / bundler build | `import.meta.env`             | N/A (handled by the bundler)                |
+| Cloudflare Workers   | **Pass `{ env }` explicitly** | N/A (no file system)                        |
+| Vercel Edge / others | **Pass `{ env }` explicitly** | N/A (no file system)                        |
 
 `parse()` auto-detects in this order: explicit `options.env` → `process.env` → `Deno.env` → `import.meta.env` → `{}`.
 

@@ -97,17 +97,14 @@ describe('loadEnvFile + parse integration', () => {
     writeFileSync(path, 'VARK_LOADER_TEST=from-file\n')
     process.env.VARK_LOADER_TEST = 'from-process'
     try {
-      const config = parse(
-        { VARK_LOADER_TEST: v.string() },
-        { load: path, override: true },
-      )
+      const config = parse({ VARK_LOADER_TEST: v.string() }, { load: path, override: true })
       expect(config.VARK_LOADER_TEST).toBe('from-file')
     } finally {
       delete process.env.VARK_LOADER_TEST
     }
   })
 
-  it('unescapes \\\' inside double-quoted values', () => {
+  it("unescapes \\' inside double-quoted values", () => {
     expect(parseEnvString(`FOO="say \\'hi\\'"`)).toEqual({ FOO: "say 'hi'" })
   })
 })

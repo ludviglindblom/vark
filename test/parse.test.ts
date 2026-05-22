@@ -141,7 +141,12 @@ describe('parse', () => {
   it('applies post-default transforms to default values', () => {
     // .default() before .transform() — transform must apply to default
     const config = parse(
-      { X: v.string().default('hi').transform((s) => s.length) },
+      {
+        X: v
+          .string()
+          .default('hi')
+          .transform((s) => s.length),
+      },
       { env: {} },
     )
     expect(config.X).toBe(2)
@@ -150,7 +155,12 @@ describe('parse', () => {
   it('does not re-apply pre-default transforms to default values', () => {
     // .transform() before .default() — default value already has post-transform type
     const config = parse(
-      { X: v.string().transform((s) => s.length).default(5) },
+      {
+        X: v
+          .string()
+          .transform((s) => s.length)
+          .default(5),
+      },
       { env: {} },
     )
     expect(config.X).toBe(5)
@@ -158,7 +168,12 @@ describe('parse', () => {
 
   it('applies transforms normally when env value is present (default unused)', () => {
     const config = parse(
-      { X: v.string().default('hi').transform((s) => s.length) },
+      {
+        X: v
+          .string()
+          .default('hi')
+          .transform((s) => s.length),
+      },
       { env: { X: 'hello' } },
     )
     expect(config.X).toBe(5)
