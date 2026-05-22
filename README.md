@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ludviglindblom/vark/main/assets/logo-light.svg">
+    <img src="https://raw.githubusercontent.com/ludviglindblom/vark/main/assets/logo.svg" alt="vark" width="160">
+  </picture>
+</p>
+
 # vark
 
 > **Sharp teeth for your environment variables.**

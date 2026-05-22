@@ -4,6 +4,14 @@
   "description": "Zero-dependency, TypeScript-first env validation and config. Bite back against misconfigured environments.",
   "license": "MIT",
   "author": "Ludvig Lindblom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludviglindblom/vark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ludviglindblom/vark/issues"
+  },
+  "homepage": "https://github.com/ludviglindblom/vark#readme",
   "type": "module",
   "sideEffects": false,
   "exports": {
