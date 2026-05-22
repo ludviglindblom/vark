@@ -12,6 +12,10 @@
     "url": "https://github.com/ludviglindblom/vark/issues"
   },
   "homepage": "https://github.com/ludviglindblom/vark#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
