@@ -1,0 +1,64 @@
+{
+  "name": "vark",
+  "version": "0.1.0",
+  "description": "Zero-dependency, TypeScript-first env validation and config. Bite back against misconfigured environments.",
+  "license": "MIT",
+  "author": "Ludvig Lindblom",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "env",
+    "environment",
+    "config",
+    "validation",
+    "typescript",
+    "dotenv"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:types": "tsd",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src test",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build && npx publint && npx attw --pack ."
+  },
+  "tsd": {
+    "directory": "test"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.0",
+    "prettier": "^3.8.3",
+    "publint": "^0.3.21",
+    "tsd": "^0.33.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4",
+    "vitest": "^4.1.7"
+  }
+}
