@@ -1,5 +1,5 @@
 {
-  "name": "vark",
+  "name": "@ludviglindblom/vark",
   "version": "0.1.0",
   "description": "Zero-dependency, TypeScript-first env validation and config. Bite back against misconfigured environments.",
   "license": "MIT",

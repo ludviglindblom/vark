@@ -11,9 +11,9 @@
 >
 > Zero-dependency, TypeScript-first env validation and config. Bite back against misconfigured environments.
 
-[![npm version](https://img.shields.io/npm/v/vark.svg)](https://www.npmjs.com/package/vark)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/vark)](https://bundlephobia.com/package/vark)
-[![license](https://img.shields.io/npm/l/vark.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@ludviglindblom/vark.svg)](https://www.npmjs.com/package/@ludviglindblom/vark)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@ludviglindblom/vark)](https://bundlephobia.com/package/@ludviglindblom/vark)
+[![license](https://img.shields.io/npm/l/@ludviglindblom/vark.svg)](./LICENSE)
 
 ## Why vark?
 
@@ -24,14 +24,14 @@
 ## Install
 
 ```sh
-npm i vark
-# or: pnpm add vark / bun add vark
+npm i @ludviglindblom/vark
+# or: pnpm add @ludviglindblom/vark / bun add @ludviglindblom/vark
 ```
 
 ## Quick start
 
 ```ts
-import { v, parse } from 'vark'
+import { v, parse } from '@ludviglindblom/vark'
 
 const config = parse({
   PORT: v.number().default(3000),
@@ -151,7 +151,7 @@ type Config = typeof config
 Or use the `InferSchema` helper directly:
 
 ```ts
-import type { InferSchema } from 'vark'
+import type { InferSchema } from '@ludviglindblom/vark'
 type Config = InferSchema<typeof schema>
 ```
 
