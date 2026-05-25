@@ -1,6 +1,6 @@
 {
   "name": "@ludviglindblom/vark",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zero-dependency, TypeScript-first env validation and config. Bite back against misconfigured environments.",
   "license": "MIT",
   "author": "Ludvig Lindblom",

@@ -61,6 +61,8 @@ VarkError: 3 environment variable(s) failed validation:
   ✖ NODE_ENV      — expected one of [development, production, test], got "staging"
 ```
 
+Using vark with React, Next.js, or SvelteKit? See the [integration guide](./docs/integration.md) for framework-specific recipes.
+
 ## Validators
 
 | Validator       | Returns   | Notes                                                     |
