@@ -12,7 +12,7 @@
 > Zero-dependency, TypeScript-first env validation and config. Bite back against misconfigured environments.
 
 [![npm version](https://img.shields.io/npm/v/@ludviglindblom/vark.svg)](https://www.npmjs.com/package/@ludviglindblom/vark)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@ludviglindblom/vark)](https://bundlephobia.com/package/@ludviglindblom/vark)
+[![bundle size](https://img.shields.io/bundlejs/size/%40ludviglindblom/vark)](https://bundlephobia.com/package/@ludviglindblom/vark)
 [![license](https://img.shields.io/npm/l/@ludviglindblom/vark.svg)](./LICENSE)
 
 ## Why vark?
